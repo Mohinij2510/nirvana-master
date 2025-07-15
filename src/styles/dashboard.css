@@ -1,0 +1,271 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background-color: #e6e6d6;
+  }
+  
+  .dashboard-wrapper {
+    display: flex;
+    height: 100vh;
+  }
+  /*.sidebar {
+    width: 220px;
+    background-color: #f0f0e0;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid #ccc;
+  }*/
+  .sidebar-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.sidebar-button {
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  font-size: 14px;
+  padding: 5px 0;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.sidebar-button:hover {
+  color: #1a4f3d;
+  font-weight: bold;
+}
+
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    line-height: 2;
+    font-size: 14px;
+  }
+  
+  
+  .logo {
+    height: 40px;
+    margin-bottom: 30px;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 30px;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .penguin {
+    height: 150px;
+    margin-right: 30px;
+  }
+  
+  .header p {
+    font-size: 18px;
+  }
+  
+  .appointment-card {
+    display: flex;
+    background-color: #A3C8A4;
+    border-radius: 15px;
+    padding: 25px;
+    gap: 25px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  }
+  .appointment-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #f0f0e0;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.appointment-form input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.appointment-form input:focus {
+  border-color: #1a4f3d;
+}
+
+.appointment-form button {
+  background-color: #1a4f3d;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.appointment-form button:hover {
+  background-color: #155c3a;
+}
+
+.appointment-form h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+  .patient-info {
+    width: 200px;
+    background: #e6f3e6;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 14px;
+  }
+  
+  .patient-list {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.patient-list .patient-info {
+  background: #e6f3e6;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+  .avatar-placeholder {
+    width: 45px;
+    height: 45px;
+    background: #ccc;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .calendar-section {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .calendar-section h4 {
+    margin-bottom: 5px;
+  }
+  
+  .month-label {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 30px);
+    gap: 5px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .calendar-day {
+    background: #d1e0d1;
+    padding: 6px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 12px;
+  }
+  
+  .slots-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 20px;
+    justify-content: center;
+  }
+  
+  .slot {
+    background-color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .slot.selected {
+    background-color: #1a4f3d;
+    color: white;
+  }
+  .calendar-day.selected {
+    background-color: #1a4f3d;
+    color: white;
+    font-weight: bold;
+  }
+  .calendar-day:hover,
+.slot:hover {
+  background-color: #bcd5b8;
+  cursor: pointer;
+}
+.calendar-day,
+.slot {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.calendar-day {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.selected-day {
+  background-color: #1a4f3d !important;
+  color: white !important;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.appointment-day {
+  background-color: #f9c74f;
+  font-weight: bold;
+}
+.has-appointment {
+  background-color: #bcd5b8;
+  border: 2px solid #1a4f3d;
+}
+
+.calendar-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.calendar-nav button {
+  background-color: #1a4f3d;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.slot.selected {
+    background-color: #1a4f3d;
+    color: white;
+  }
